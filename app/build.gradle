@@ -1,16 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 10 // Gingerbread (highest it should go for an E10i)
     defaultConfig {
-        applicationId "io.github.gohoski.notpipe"
-        minSdkVersion 3
-        //noinspection OldTargetApi
-        targetSdkVersion 25
-        versionCode 4
-        versionName "0.2.0"
-        setProperty("archivesBaseName", "notPipe-$versionName") //e.g. notPipe-0.1.0-release.apk
+        minSdkVersion 3    // Android 1.5 Cupcake
+        targetSdkVersion 10
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
     }
     buildTypes {
         release {
